@@ -1,0 +1,33 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+line console 0
+logging synchronous
+exit
+no ip domain-lookup
+
+hostname spine-2
+
+vlan 10
+name dc-west
+vlan 20
+name dc-east
+vlan 99
+exit
+
+interface gigabitEthernet 1/0
+switchport mode access
+switchport access vlan 20
+no shutdown
+
+interface range gigabitEthernet 0/0-3
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+switchport trunk native vlan 99
+exit
+
+end
+write-memory

@@ -1,0 +1,36 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+line console 0
+logging synchronous
+exit
+no ip domain-lookup
+
+hostname leaf-3
+
+vlan 10
+name dc-west
+vlan 20
+name dc-east
+vlan 99
+exit
+
+interface vlan 10
+ip address 10.0.10.13 255.255.255.0
+no shut
+
+interface vlan 20
+ip address 10.0.20.13 255.255.255.0
+no shut
+
+interface range gigabitEthernet 0/0-1
+switchport trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 10,20
+switchport trunk native vlan 99
+exit
+
+end
+write-memory
