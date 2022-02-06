@@ -1,0 +1,25 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+exec-timeout 0
+line console 0
+logging synchronous
+exec-timeout 0
+exit
+no ip domain-lookup
+
+hostname R4
+
+ip routing
+
+interface g0/0
+ip address 10.0.2.2 255.255.255.252
+no shutdown
+
+interface g0/2
+ip address 10.0.2.5 255.255.255.252
+no shutdown
+
+do write memory

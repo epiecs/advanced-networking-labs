@@ -1,0 +1,33 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+exec-timeout 0
+line console 0
+logging synchronous
+exec-timeout 0
+exit
+no ip domain-lookup
+
+hostname R5
+
+ip routing
+
+interface g0/0
+ip address 10.0.2.13 255.255.255.252
+no shutdown
+
+interface g0/1
+ip address 10.0.2.10 255.255.255.252
+no shutdown
+
+interface g0/2
+ip address 10.0.2.6 255.255.255.252
+no shutdown
+
+router eigrp 20
+network 10.0.2.12 0.0.0.3
+no auto-summary
+
+do write memory

@@ -1,0 +1,30 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+exec-timeout 0
+line console 0
+logging synchronous
+exec-timeout 0
+exit
+no ip domain-lookup
+
+hostname R8
+
+ip routing
+ip route 0.0.0.0 0.0.0.0 g0/0 10.0.2.13
+
+interface g0/0
+ip address 10.0.2.14 255.255.255.252
+no shutdown
+
+interface loopback 0
+ip address 198.51.100.1 255.255.255.0
+
+router eigrp 20
+network 10.0.2.12 0.0.0.3
+network 198.51.100.0 0.0.0.255
+no auto-summary
+
+do write memory
