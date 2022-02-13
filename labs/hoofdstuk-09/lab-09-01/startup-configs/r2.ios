@@ -23,7 +23,7 @@ ip address 203.0.113.2 255.255.255.252
 no shutdown
 
 interface g0/2
-ip address 203.0.113.7 255.255.255.252
+ip address 203.0.113.9 255.255.255.252
 no shutdown
 
 do write memory
