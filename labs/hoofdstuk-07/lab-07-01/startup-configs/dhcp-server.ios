@@ -1,0 +1,23 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+exec-timeout 0
+line console 0
+logging synchronous
+exec-timeout 0
+exit
+no ip domain-lookup
+
+hostname DHCP-SERVER
+
+ip routing
+ipv6 unicast-routing
+
+interface g0/1
+ipv6 address fe80::2 link-local
+ipv6 address 2001:db8:2::2/64
+no shutdown
+
+do write memory
