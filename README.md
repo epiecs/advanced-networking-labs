@@ -29,3 +29,7 @@ Deze kan je verkrijgen als je een Cisco CML licentie aankoopt. Je kan de nodige 
     - [Lab-07-01](labs/hoofdstuk-07/lab-07-01.md)
 -   10 - OSPF configureren
     - [Lab-10-01](labs/hoofdstuk-10/lab-10-01.md)
+-   14 - BGP configureren
+    - [Lab-14-01](labs/hoofdstuk-14/lab-14-01.md)
+
+> De links werken enkel als je lokaal de repository gebruikt
