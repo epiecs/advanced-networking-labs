@@ -10,7 +10,7 @@ exec-timeout 0
 exit
 no ip domain-lookup
 
-hostname R1
+hostname R3
 
 ip routing
 
@@ -28,6 +28,10 @@ no shutdown
 
 interface lo10
 ip address 192.168.0.1 255.255.255.0
+no shutdown
+
+interface lo30
+ip address 198.51.100.1 255.255.255.0
 no shutdown
 
 do write memory
