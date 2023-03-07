@@ -22,8 +22,8 @@ Deze kan je verkrijgen als je een Cisco CML licentie aankoopt. Je kan de nodige 
 ## Labo's
 
 -   02 - Spanning tree configureren
-    - [Lab-02-01](labs/hoofdstuk-02/lab-02-01.md)
+    - [Lab-02-01](labs/hoofdstuk-02/lab-02-01/lab-02-01.md)
 -   07 - IPv6 configureren
-    - [Lab-07-01](labs/hoofdstuk-07/lab-07-01.md)
+    - [Lab-07-01](labs/hoofdstuk-07/lab-07-01/lab-07-01.md)
 -   10 - OSPF configureren
-    - [Lab-10-01](labs/hoofdstuk-10/lab-10-01.md)
+    - [Lab-10-01](labs/hoofdstuk-10/lab-10-01/lab-10-01.md)
