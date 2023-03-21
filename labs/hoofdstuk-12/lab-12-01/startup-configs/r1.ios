@@ -1,0 +1,45 @@
+enable
+configure terminal
+
+line vty 0 15
+logging synchronous
+exec-timeout 0
+line console 0
+logging synchronous
+exec-timeout 0
+exit
+no ip domain-lookup
+
+hostname R1
+
+ip routing
+
+ip route 0.0.0.0 0.0.0.0 gigabitEthernet 0/3 192.168.122.1
+
+interface g0/3
+ip address 192.168.122.2 255.255.255.0
+ip nat outside
+no shutdown
+
+interface g0/0
+ip address 172.16.0.1 255.255.255.0
+no shutdown
+
+interface g0/1
+ip address 10.0.0.1 255.255.255.0
+no shutdown
+
+interface g0/2
+ip address 192.168.0.1 255.255.255.0
+no shutdown
+
+interface range g0/0-2
+ip nat inside
+
+ip access-list standard LAN_ALLOW_PAT
+permit 10.0.0.0 0.255.255.255
+permit 172.16.0.0 0.15.255.255
+permit 192.168.0.0 0.0.255.255
+ip nat inside source list LAN_ALLOW_PAT interface g0/3 overload
+
+do write memory

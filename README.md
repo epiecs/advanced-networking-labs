@@ -17,6 +17,19 @@ De gids heeft zowel instructies voor VmWare workstation en Virtualbox.
 
 Bijna alle images van toestellen die we gebruiken in GNS3 zijn gratis te verkrijgen. Een uitzondering zijn de routers en switches. Voor de routers en switches gaan we gebruik maken van de `Cisco IOSv`, `IOSvL2` en `NX-OSv 9000` images. 
 
+De volgende specifieke images zijn gebruikt:
+
+```
+Network devices
+Switch - vios_l2-adventerprisek9-m.ssa.high_iron_20200929.qcow2
+Router - vios-adventerprisek9-m.spa.159-3.m3.qcow2
+Nexus  - nexus9500v64.10.1.1.qcow2
+
+Guests
+VPCS
+Toolbox
+```
+
 Deze kan je verkrijgen als je een Cisco CML licentie aankoopt. Je kan de nodige info hier vinden: https://www.cisco.com/c/en/us/products/cloud-systems-management/modeling-labs
 
 ## Labo's
@@ -29,5 +42,7 @@ Deze kan je verkrijgen als je een Cisco CML licentie aankoopt. Je kan de nodige 
     - [Lab-07-01](labs/hoofdstuk-07/lab-07-01/lab-07-01.md)
 -   10 - OSPF configureren
     - [Lab-10-01](labs/hoofdstuk-10/lab-10-01/lab-10-01.md)
+-   12 - ACLS configureren
+    - [Lab-12-01](labs/hoofdstuk-12/lab-12-01/lab-12-01.md)
 -   14 - BGP configureren
     - [Lab-14-01](labs/hoofdstuk-14/lab-14-01/lab-14-01.md)
