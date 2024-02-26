@@ -35,4 +35,4 @@ switchport trunk native vlan 99
 exit
 
 end
-write-memory
+do write memory
